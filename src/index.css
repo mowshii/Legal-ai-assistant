@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: #F3E9D8;
+  color: #2B1B12;
+  font-family: "Catamaran", sans-serif;
+}
+
+h1, h2, h3, .font-display {
+  font-family: "Fraunces", serif;
+}
+
+/* Respect reduced-motion preferences everywhere */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ---- Hero 3D wax seal (the one bold, orchestrated moment on the page) ---- */
+.seal-stage {
+  perspective: 900px;
+}
+
+.seal-3d {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: seal-spin 16s linear infinite;
+}
+
+@keyframes seal-spin {
+  from { transform: rotateY(0deg) rotateX(8deg); }
+  to   { transform: rotateY(360deg) rotateX(8deg); }
+}
+
+.seal-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #CD6B48 0%, #B5502F 55%, #7A2F19 100%);
+  box-shadow:
+    inset 0 6px 18px rgba(255,255,255,0.25),
+    inset 0 -10px 24px rgba(0,0,0,0.35),
+    0 18px 40px rgba(43,27,18,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seal-ring {
+  position: absolute;
+  inset: 14px;
+  border-radius: 50%;
+  border: 2px dashed rgba(243,233,216,0.55);
+}
