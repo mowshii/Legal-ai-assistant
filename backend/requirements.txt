@@ -1,0 +1,33 @@
+# ---- Core web framework ----
+Flask==3.0.3
+Flask-CORS==4.0.1
+Flask-JWT-Extended==4.6.0
+
+# ---- Database ----
+Flask-SQLAlchemy==3.1.1
+SQLAlchemy==2.0.35
+psycopg2-binary==2.9.9
+pgvector==0.3.4
+alembic==1.13.3
+
+# ---- Security ----
+Werkzeug==3.0.4
+bcrypt==4.2.0
+python-dotenv==1.0.1
+
+# ---- PDF / OCR ----
+PyMuPDF==1.24.10
+pdfplumber==0.11.4
+pytesseract==0.3.13
+pdf2image==1.17.0
+Pillow==10.4.0
+
+# ---- AI / RAG / Agents ----
+langchain==0.3.4
+langchain-community==0.3.3
+langgraph==0.2.39
+ollama==0.3.3
+sentence-transformers==3.1.1
+
+# ---- Misc ----
+python-magic==0.4.27
